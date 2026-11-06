@@ -7,11 +7,11 @@ Any system that holds employee policy needs approval from the people responsible
 
 Lexisource HR is built around three principles:
 
-- **Role-based access.** Access is set by role. A person can retrieve only the policies they are explicitly cleared to see, and nothing else appears in their answers.
-- **Integrity.** Every answer comes from the governed record and cites the exact policy and version behind it. Nothing is presented as policy unless it is in the record.
-- **Observability.** Queries are visible to the people who govern the system, so you can review who asked what and which sources answered it.
+- **Role-based access.** Access is set by role. Answers draw only on the policies a person is explicitly cleared to see.
+- **Integrity.** Every answer is drawn from the governed record and cites the exact policy and version behind it, so your team can check the source for themselves.
+- **Observability.** The people who govern the system can see how it's being used and which sources it draws on.
 
-Lexisource HR is a **predictable AI system** built on open, vendor-neutral knowledge infrastructure. One authoritative record serves many open projections: for humans, for AI discovery, for AI agents and for knowledge systems. You stay in control of the record.
+Lexisource HR is a **predictable AI system** built on open, vendor-neutral knowledge infrastructure. One authoritative record serves many open projections, meaning the same record is shared in the right format for each use: for humans, for AI discovery, for AI agents and for knowledge systems. You stay in control of the record.
 
 Our security overview sets out each control in plain English, so your compliance team can review it for themselves.
 
