@@ -57,3 +57,8 @@ Every email ends with:
 Aimon Shakeel
 HR Technologist | AI-Driven HR Transformation
 Lexisource HR
+
+## 6. Style
+
+- Use US spelling, such as "organization" and "center".
+- Use contractions, such as "it's", "here's" and "don't". They keep our writing clear and reassuring.

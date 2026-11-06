@@ -10,8 +10,8 @@ You joined the Lexisource HR waitlist to find a better way to manage policy know
 Here's what that means for your team:
 
 - **A single source of truth.** One authoritative record of policy, instead of copies spread across Slack, shared drives and desktops.
-- **Governed answers in seconds.** Ask in plain language and get an answer that cites the exact policy it came from.
-- **Role-based access.** People see only what they're cleared to see.
+- **Governed answers in seconds.** Ask in plain language and get an answer that cites the exact policy and version it came from.
+- **Role-based access.** Answers draw only on the policies a person is cleared to see.
 
 When the same question reaches HR for the tenth time this week, the answer is already in the record, and everyone gets it from the same governed source.
 
