@@ -1,3 +1,11 @@
+# Personal Claude Code settings (never committed)
+.claude/settings.local.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Other
 node_modules/
 .env
 .env.*
@@ -8,5 +16,4 @@ __pycache__/
 venv/
 dist/
 build/
-.DS_Store
 *.log
