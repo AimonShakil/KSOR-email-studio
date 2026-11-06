@@ -93,7 +93,7 @@ Campaign window: **Monday 7 December 2026 to Sunday 3 January 2027.** Emails go 
 | Unsubscribe rate | Under 0.5% per email | Email service reports |
 | Conversion by group | Reported for each of the three groups | Group tag on each sign-up |
 
-**Reporting:** a short check every Friday (11, 18 and 23 December, and 1 January), and a final report on Tue 5 Jan 2027.
+**Reporting:** a short weekly check on Fri 11 Dec, Fri 18 Dec, Thu 24 Dec (moved from Fri 25 Dec, Christmas Day) and Fri 1 Jan, and a final report on Tue 5 Jan 2027.
 
 ## 8. Budget allocation
 
