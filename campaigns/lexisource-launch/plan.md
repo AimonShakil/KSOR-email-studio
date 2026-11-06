@@ -4,7 +4,7 @@
 
 - **Campaign name:** One Authoritative Record
 - **Summary:** A four-week email campaign that invites our waitlist to start using Lexisource HR, the Knowledge System of Record for enterprise policy intelligence.
-- **Primary goal:** **300 waitlist members start a subscription** (a paid plan or a paid pilot) **by Sunday 3 January 2027**, the end of the four-week campaign.
+- **Primary goal:** **300 waitlist members start a subscription** (a paid plan) **by Sunday 3 January 2027**, the end of the four-week campaign.
 - **Secondary goals:**
   - 600 waitlist members visit the launch page and view a product walkthrough.
   - 100 people book a 20-minute governed-answers demo.
@@ -119,7 +119,7 @@ No money goes to paid ads.
 
 ## 10. Next steps
 
-1. Confirm what "start a subscription" means for this launch, such as a paid plan, a paid pilot or both, and add it to the launch page. **(Owner to confirm.)**
+1. "Start a subscription" means starting a **paid plan** (confirmed 2026-11-06). Make this clear on the launch page.
 2. Confirm which security controls and certifications we can truthfully name. **(Owner to confirm.)**
 3. Build and test the launch page by Tue 1 Dec 2026.
 4. Write the four emails, then the group versions, and review them by Fri 4 Dec 2026.
