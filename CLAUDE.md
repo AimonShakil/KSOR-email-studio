@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this studio is for
 
-This is an email marketing studio for a small business. We plan email campaigns and write the emails here. Our sample business is **Kettlebird Tea**, a small made-up online tea shop launching a monthly tea box called **The Steep Club**.
+This is an email marketing studio for a small business. We plan email campaigns and write the emails here. Our brand is **Lexisource HR**, the Knowledge System of Record (KSoR) for enterprise policy intelligence. The lab's sample brand, Kettlebird Tea, is not used.
+
+@brand/voice.md
 
 ## Folders
 
