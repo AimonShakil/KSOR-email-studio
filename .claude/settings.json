@@ -10,6 +10,14 @@
   "enabledPlugins": {
     "marketing@knowledge-work-plugins": true
   },
+  "permissions": {
+    "deny": [
+      "Bash(pass:*)",
+      "Bash(gpg:*)",
+      "Read(~/.password-store/**)",
+      "Read(~/.gnupg/**)"
+    ]
+  },
   "hooks": {
     "PreToolUse": [
       {

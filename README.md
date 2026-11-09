@@ -20,7 +20,8 @@ The studio is built step by step from `Email Studio Lab Assignment.md`, a 15-ste
 | `.claude/rules/emails.md` | Rules every email file must follow: subject and preview length, greeting, one link, sign-off and footer |
 | `.claude/skills/personalize/` | The `/personalize` skill, which writes one version of each campaign email for every lead group |
 | `.claude/hooks/send-guard.mjs` | The send guard: a `PreToolUse` hook that checks Resend tool calls before they run |
-| `.mcp.json` | Connects the Resend MCP server (practice mode by default) |
+| `.mcp.json` | Connects the Resend MCP server through the launcher |
+| `.claude/scripts/resend-launcher.mjs` | Starts the Resend MCP server in live mode when it can read the key from `pass`, and in practice mode otherwise |
 
 ## How sending is kept safe
 
@@ -51,7 +52,63 @@ There are two layers:
    }
    ```
 
-4. Resend runs in practice mode by default. `.mcp.json` points at `http://localhost:4000` and uses the key `re_practice`. To use a real Resend account instead, set `RESEND_API_KEY`, `RESEND_BASE_URL` and `SENDER_EMAIL_ADDRESS` in your environment.
+4. Resend runs in practice mode by default, against `http://localhost:4000` with the key `re_practice`. To go live, see [Live sending](#live-sending).
+
+## Live sending
+
+The live Resend API key is kept in [`pass`](https://www.passwordstore.org/), the standard Linux password manager, which encrypts it with your GPG key. It is never stored in the repo or in a plain-text file.
+
+When the Resend MCP server starts, `.claude/scripts/resend-launcher.mjs` tries to read the key with `pass show resend/api-key`:
+
+- **If that works**, it starts `resend-mcp` against `https://api.resend.com` and gives the key only to that process. Claude Code's own environment never holds it.
+- **If it doesn't** (`pass` isn't installed, the entry is missing or the GPG key is locked), it starts in practice mode. Forgetting to unlock means nothing goes out for real.
+
+The launcher reports which mode it chose on stderr, and it never prints the key.
+
+### One-time setup (WSL or Linux)
+
+1. Install `pass`:
+
+   ```bash
+   sudo apt install pass
+   ```
+
+2. Create a GPG key if you don't have one. Choose the defaults and set a strong passphrase:
+
+   ```bash
+   gpg --full-generate-key
+   ```
+
+3. Set up the password store with that key's email:
+
+   ```bash
+   pass init you@example.com
+   ```
+
+4. In the Resend dashboard, create an API key with **Sending access** only. Then store it. `pass` asks for it twice and doesn't show what you type:
+
+   ```bash
+   pass insert resend/api-key
+   ```
+
+### Each live session
+
+1. Unlock the key in a terminal. GPG asks for your passphrase and keeps the key unlocked for a while:
+
+   ```bash
+   pass show resend/api-key > /dev/null
+   ```
+
+2. Start or restart the Claude Code session. MCP servers only start with the session.
+3. Send one test to `delivered@resend.dev` and check it appears under **Emails** in your Resend dashboard.
+
+To send from your own domain instead of `onboarding@resend.dev`, verify the domain in Resend and set `SENDER_EMAIL_ADDRESS` in your environment.
+
+### Guard rails
+
+- **Deny rules** in `.claude/settings.json` stop Claude from running `pass` or `gpg`, or reading `~/.password-store` and `~/.gnupg`.
+- **The send guard** still applies in live mode: only `@resend.dev` addresses and `MY_EMAIL` can receive email.
+- **A sending-only key** means a leaked key can only send email. It can't delete domains or read contacts.
 
 The marketing plugin (`marketing@knowledge-work-plugins`) is turned on for this project in `.claude/settings.json`.
 
